@@ -18,3 +18,15 @@ In order to develop a new problem, you will need to accomplish the following ste
   int tower2`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
   int tower3`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
   ProblemData state`(`tower1, tower2, tower3`)`; <br>
+
+  # *Explain what is a problem goal* In ProblemData::isGoal, you must develop a method that can return (1) if a state is a Goal and (0) othewise.
+
+<font color="#0000FF">
+int ProblemData::isGoal(ProblemData* pdptr)
+{
+    if (a==1) {
+      return(1); 
+   } else return(0);
+
+};
+<font color="#000000">
