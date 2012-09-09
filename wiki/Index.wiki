@@ -1,10 +1,9 @@
 #labels Featured
-
 = Introduction =
 
 Welcome to the ProSE Wiki. Here you will find:
 
-  * Project Vision and requirements
+  * Project Vision and requirements [WikiSyntax#Wiki-style_markup]
   * Project design and key concepts
   * Developers guide
   * How to install, configure and run
