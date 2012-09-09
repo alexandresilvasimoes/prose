@@ -9,7 +9,7 @@ In order to develop a new problem, you will need to accomplish the following ste
   //Example for water-jugs problem:
    ProblemData state`(`0,0`)`; <br>
 
-  //Example for Hanoi tower problem:
+  //Example for Hanoi tower problem: <br>
   int tower1`[`NUM_DISKS`]` = `{`5,4,3,2,1`}`; <br>
   int tower2`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
   int tower3`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
