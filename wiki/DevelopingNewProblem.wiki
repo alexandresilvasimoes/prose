@@ -10,6 +10,7 @@ In order to develop a new problem, you will need to accomplish the following ste
   //Example for water-jugs problem:
    </font>
   ProblemData `state``(`0,0`)`; <br>
+
    <font color="#0000FF">
   //Example for Hanoi tower problem: <br>
    </font>
