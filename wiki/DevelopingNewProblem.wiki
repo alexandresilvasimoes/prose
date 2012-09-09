@@ -6,6 +6,8 @@ In order to develop a new problem, you will need to accomplish the following ste
 
   # Create initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter
 
+   <font color="#0000FF">
+
   //Example for water-jugs problem:
    ProblemData state`(`0,0`)`; <br>
 
