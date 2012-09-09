@@ -8,12 +8,12 @@ In order to develop a new problem, you will need to accomplish the following ste
 
    <font color="#0000FF">
   //Example for water-jugs problem: <br>
-   </font>
+   <font color="#000000">
   ProblemData state `(`0,0`)`; <br>
 
    <font color="#0000FF">
   //Example for Hanoi tower problem: <br>
-   </font>
+   <font color="#000000">
   int tower1`[`NUM_DISKS`]` = `{`5,4,3,2,1`}`; <br>
   int tower2`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
   int tower3`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
