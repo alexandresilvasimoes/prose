@@ -29,3 +29,16 @@ In order to develop a new problem, you will need to accomplish the following ste
       if (a==1)  return(1); else return(0);
    `}`;
    <font color="#000000">
+
+  #  *Explain how to print your states.* In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
+
+
+
+char`*` ProblemData`::`print`()`
+   `{`
+     char* buffer; <br>
+     char aux; <br
+     buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE])); <br>
+     strcat(buffer, "this is my state"); <br>
+     return(buffer); <br>
+   `}`;
