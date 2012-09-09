@@ -36,9 +36,9 @@ In order to develop a new problem, you will need to accomplish the following ste
 
 char`*` ProblemData`::`print`()`
    `{`
-     char* buffer; <br>
+     char`*` buffer; <br>
      char aux; <br
-     buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE])); <br>
-     strcat(buffer, "this is my state"); <br>
-     return(buffer); <br>
+     buffer = `(`char`*``)` malloc `(`sizeof`(`char`[`MAX_TEXT_SIZE`]``)``)`; <br>
+     strcat`(`buffer, `"`this is my state`"``)`; <br>
+     return`(`buffer`)`; <br>
    `}`;
