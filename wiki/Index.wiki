@@ -1,0 +1,17 @@
+#labels Featured
+#ProSE General Overview
+
+= Introduction =
+
+Here you will find:
+
+  * Project Vision and requirements
+  * Project design and key concepts
+  * Developers guide
+  * How to install, configure and run
+
+
+= Team =
+
+  * Prof. Alexandre da Silva Simões (UNESP)
+  * Prof. Esther Luna Colombini (UNESP/FEI)
