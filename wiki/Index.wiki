@@ -1,9 +1,8 @@
 #labels Featured
-#ProSE General Overview
 
 = Introduction =
 
-Here you will find:
+Welcome to the ProSE Wiki. Here you will find:
 
   * Project Vision and requirements
   * Project design and key concepts
