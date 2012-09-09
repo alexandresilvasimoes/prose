@@ -10,10 +10,10 @@ In order to develop a new problem, you will need to accomplish the following ste
    ProblemData state`(`0,0`)`; <br>
 
   //Example for Hanoi tower problem:
-  int torre1[NUM_DISKS] = {5,4,3,2,1};
-  int torre2[NUM_DISKS] = {0,0,0,0,0};
-  int torre3[NUM_DISKS] = {0,0,0,0,0};
-  ProblemData state(torre1, torre2, torre3);
+  int tower1`[`NUM_DISKS`]` = `{`5,4,3,2,1`}`;
+  int tower2`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`;
+  int tower3`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`;
+  ProblemData state`(`tower1, tower2, tower3`)`;
 
   //Example for Rubiks cube problem:
    char mycube[6][9] = {  'O','O','O','W','W','W','W','W','W', 
