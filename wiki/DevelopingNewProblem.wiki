@@ -1,0 +1,33 @@
+#summary One-sentence summary of this page.
+
+= How do I develop a new problem? =
+
+In order to develop a new problem, you will need to accomplish the following steps:
+
+  # Create initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter
+
+  //Example for water-jugs problem:
+   ProblemData state(0,0);
+
+  //Example for Hanoi tower problem:
+  int torre1[NUM_DISKS] = {5,4,3,2,1};
+  int torre2[NUM_DISKS] = {0,0,0,0,0};
+  int torre3[NUM_DISKS] = {0,0,0,0,0};
+  ProblemData state(torre1, torre2, torre3);
+
+  //Example for Rubiks cube problem:
+   char mycube[6][9] = {  'O','O','O','W','W','W','W','W','W', 
+                       'Y','Y','Y','O','O','O','O','O','O', 
+                       'W','W','W','R','R','R','R','R','R', 
+                       'G','G','G','G','G','G','G','G','G',
+                       'B','B','B','B','B','B','B','B','B',
+                       'R','R','R','Y','Y','Y','Y','Y','Y'};
+   ProblemData state(&mycube[0][0]);
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
