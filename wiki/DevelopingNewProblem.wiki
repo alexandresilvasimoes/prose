@@ -1,13 +1,13 @@
-#summary One-sentence summary of this page.
+#How do I develop code to a new problem?
 
-= How do I develop a new problem? =
+= How do I develop code to a new problem? =
 
 In order to develop a new problem, you will need to accomplish the following steps:
 
   # Create initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter
 
   //Example for water-jugs problem:
-   ProblemData state(0,0); <hr>
+   ProblemData state(0,0); <br>
 
   //Example for Hanoi tower problem:
   int torre1[NUM_DISKS] = {5,4,3,2,1};
