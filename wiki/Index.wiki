@@ -9,12 +9,21 @@ Welcome to the ProSE Wiki. Here you will find:
   * How to install, configure and run
 
 
-= What problems are already ready for use? =
+== What problems are implemented and ready for use? ==
 
-  * Water-jugs problem
-  * Tower of Hanoi
-  * Rubik's cube
-  * Oil and tubes problem
+  # [WaterJugs Water-jugs problem]
+  # [HanoiTower Tower of Hanoi]
+  # [Rubik Rubik's cube]
+  # Oil and tubes problem
+  # [Missionaries Missionaries and cannibals problem]
+  # [8Queens 8-Queens problem]
+  # [8Puzzle 8-Puzzle problem]
+  # [VacuumWorld Vacuum world problem]
+  # [TravelingSalesperson Traveling salesperson problem]
+  # [MapColoring Map coloring problem]
+  # [BlocksWorld Blocks world problem]
+  # [Sudoku Sudoku]
+  # [AradBucharest Arad-Bucharest problem]
 
 = Team =
 
