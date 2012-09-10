@@ -16,8 +16,8 @@ The *ProblemData* class has the following structure: <br/>
          int isGoal(ProblemData *);    //Returns 1 when the argument is a goal
          int heuristic(void);          //Returns the estimated path coast from node to the goal
          int cost(void);               //Returns the path cost from node to the initial node
-         char* print(void);             //How to print the state?
-         ProblemData(void);           //Class constructor
+         char* print(void);            //How to print the state?
+         ProblemData(void);            //Class constructor
    };
 }}}
 
