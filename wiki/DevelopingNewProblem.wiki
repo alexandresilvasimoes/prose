@@ -21,6 +21,8 @@ If you would like to develop code to a new problem, it is simple. User must edit
    };
 }}}
 
+The ProblemRules store the rules of the problem. Its general structure is:
+
 {{{
 class ProblemRules
 {
