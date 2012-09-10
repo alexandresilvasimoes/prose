@@ -62,7 +62,7 @@ The first thing to think is: how can I model my states? The vars that you need t
       private:
          char cube[6][9];   //Model a cube with 6 faces and 9 cells in each face                  
          ...
-   //Example for the Water-jug problem:
+   //Example for the Water-jugs problem:
    class ProblemData {
       private:
          int jar1;   //Store the amount of water in jar 1
