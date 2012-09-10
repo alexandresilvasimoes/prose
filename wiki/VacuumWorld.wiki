@@ -11,6 +11,6 @@ http://homepages.ius.edu/rwisman/C463/html/chapter3-5.gif
 
 Modeled problem consider the following possible actions:
   *  `R1:`  Move vacuum to the left room
-  *  R2`:` Move vacuum to the right room
-  *  R3`:` Suck
+  *  `R2:`  Move vacuum to the right room
+  *  `R3:`  Suck
 Problem is modeled with 2 rooms.
