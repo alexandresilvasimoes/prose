@@ -115,11 +115,10 @@ You must create a initial state (problem search seed state) to your problem. Her
 In `ProblemData::isGoal( )`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
 {{{
-   int ProblemData::isGoal(ProblemData`*` pdptr)
+   //Example for water-jugs problem
+   int ProblemData::isGoal(ProblemData* pdptr)
    {
-      int a;
-      a = 1;
-      if (a==1)  return(1); else return(0);
+      if ((pdptr->getJar1()==2) || (pdptr->getJar2()==2)) return(1); else return(0);
    };
 }}}
 
