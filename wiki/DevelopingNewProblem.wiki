@@ -87,9 +87,10 @@ You must create a initial state (problem search seed state) and create a Problem
    //Example for Hanoi tower problem: 
    ProblemData::ProblemData(void) 
    {
-      tower1 = {5,4,3,2,1};
-      tower2 = {0,0,0,0,0}; 
-      tower3 = {0,0,0,0,0}; 
+      int my_tower1[5] = {5,4,3,2,1};
+      int my_tower2[5] = {0,0,0,0,0}; 
+      int my_tower3[5] = {0,0,0,0,0}; 
+      ProblemData state(my_tower1, my_tower2, my_tower3);
    }
 }}}
 
