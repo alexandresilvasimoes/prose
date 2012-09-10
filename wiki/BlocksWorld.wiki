@@ -16,5 +16,5 @@ The possible actions for the robot are:
 Goal state: 
   * `Pos 1:`: A, B, C
   * `Pos 2:`: D, E, F
-  * `Pos 3:`: G
+  * `Pos 3:`: G, H, I
   * `Pos 4:`: -
