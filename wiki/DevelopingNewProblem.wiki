@@ -3,7 +3,7 @@
 = How do I develop code to a new problem? =
 
    <font color="#0000FF">
-   class ProblemData {
+   "class ProblemData {
       private:
          //problem vars 
       public:
@@ -14,7 +14,7 @@
          int cost(void);                       //Retuns the path cost from node to the initial node
          char* print(void);                  //How to print the state?
          ProblemData(void);               //Constructor without initialization
-   };
+   };"
    <font color="#000000">
 
 In order to develop a new problem, you will need to accomplish the following steps:
