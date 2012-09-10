@@ -8,4 +8,4 @@ Given a collection of cities and the cost of travel between each pair of them, t
 
 You should consider the TSP applied to allow the visitation of the following UNESP campus: Sorocaba (start city), Bauru, Ilha Solteira, Guaratinguetá, São Paulo.
 
-http://pt.wikipedia.org/wiki/Ficheiro:Example_The_travelling_salesman_problem_(TSP).gif
+http://upload.wikimedia.org/wikipedia/commons/9/9f/Example_The_travelling_salesman_problem_%28TSP%29.gif
