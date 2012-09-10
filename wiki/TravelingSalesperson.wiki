@@ -6,6 +6,7 @@ Given a collection of cities and the cost of travel between each pair of them, t
 
 = Details =
 
-You should consider the TSP applied to allow the visitation of the following UNESP campus: Sorocaba (start city), Bauru, Ilha Solteira, Guaratinguetá, São Paulo.
+You should consider the TSP applied to allow the visitation of the UNESP campus: 
+Sorocaba (start city), Rosana, Tupã, Dracena, Registro, Itapeva, Ourinhos.
 
 http://upload.wikimedia.org/wikipedia/commons/9/9f/Example_The_travelling_salesman_problem_%28TSP%29.gif
