@@ -44,7 +44,14 @@ class ProblemRules
 
 }}}
 
-== Model your states ==
+== Steps for modeling your problems ==
+
+  # Model your states
+  # Assign your initial state
+  # Explain what are your goals
+  # Define your problem's rules
+
+== 1. Model your states ==
 
 The first thing to think is: how can I model my states? The vars that you need to model your state must be inserted in your ProblemData class. Here are some examples:
 
@@ -62,7 +69,7 @@ The first thing to think is: how can I model my states? The vars that you need t
          ...
 }}}
 
-== Creating a initial state ==
+== Assigning a initial state ==
 
 In order to develop a new problem, you will need to accomplish the following steps:
 
