@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Consider that there is a robot capable to move blocks. There are four available positions, and blocks can be stacked in any of the four positions. At any time each position canot have more than 4 stacked blocks. The original position of blocks is show bellow. 
+
+http://clip.dia.fi.upm.es/~vocal/public_info/seminar_notes/img110.gif
+
+= Details =
+
+The possible actions for the robot are: 
+  *  Pick a block;
+  *  Drop a block;
+  *  Move left;
+  *  Move right.
+Goal state: 
+  * `Pos 1:`: A, B, C
+  * `Pos 2:`: D, E, F
+  * `Pos 3:`: G
+  * `Pos 4:`: -
