@@ -12,7 +12,7 @@
          int isGoal`(`ProblemData `*)`;    //Returns 1 when the node is a goal<br/>
          int heuristic`(`void`)`;                //Returns the estimated path coast from node to the goal<br/>
          int cost`(`void`)`;                       //Retuns the path cost from node to the initial node<br/>
-         char* print`(`void`)`;                  //How to print the state?<br/>
+         char`*` print`(`void`)`;                  //How to print the state?<br/>
          ProblemData`(`void`)`;               //Constructor without initialization<br/>
    `};`<br/>
    <font color="#000000">
