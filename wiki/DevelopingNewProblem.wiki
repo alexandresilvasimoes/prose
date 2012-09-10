@@ -112,7 +112,7 @@ You must create a initial state (problem search seed state) to your problem. Her
 
 == 3. Explain what are problem goals ==
 
-In `ProblemData::isGoal( )`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
+In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
 {{{
    //Example for water-jugs problem
