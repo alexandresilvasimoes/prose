@@ -6,8 +6,8 @@ The goal of a map coloring problem is to color a map so that regions sharing a c
 
 = Details =
 
-This problem consider the partial Europe map:
+This problem considers: <br>
+  * Three colors: red, green, blue;
+  * The partial Europe map:
 
 http://www.ctl.ua.edu/math103/mapcolor/wpe4215.gif
-
-Consider three colors: red, green, blue.
