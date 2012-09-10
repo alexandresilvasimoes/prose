@@ -1,6 +1,6 @@
-#summary One-sentence summary of this page.
+#Blocks world problem.
 
-= Introduction =
+= Blocks World problem =
 
 Consider that there is a robot capable to move blocks. There are four available positions, and blocks can be stacked in any of the four positions. At any time each position canot have more than 4 stacked blocks. The original position of blocks is show bellow. 
 
