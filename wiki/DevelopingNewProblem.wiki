@@ -3,18 +3,18 @@
 = How do I develop code to a new problem? =
 
    <font color="#0000FF">
-   "class ProblemData {
-      private:
-         //problem vars 
-      public:
-         char* getState(void);            //Returns current state
-         void  setState(char*);            //Set current state
-         int isGoal(ProblemData *);    //Returns 1 when the node is a goal
-         int heuristic(void);                //Returns the estimated path coast from node to the goal
-         int cost(void);                       //Retuns the path cost from node to the initial node
-         char* print(void);                  //How to print the state?
-         ProblemData(void);               //Constructor without initialization
-   };"
+   class ProblemData `{`<br>
+      private`:`
+         `//`problem vars 
+      public`:`
+         char`*` getState`(`void`)`;            //Returns current state
+         void  setState`(`char`*)`;            //Set current state
+         int isGoal`(`ProblemData `*)`;    //Returns 1 when the node is a goal
+         int heuristic`(`void`)`;                //Returns the estimated path coast from node to the goal
+         int cost`(`void`)`;                       //Retuns the path cost from node to the initial node
+         char* print`(`void`)`;                  //How to print the state?
+         ProblemData`(`void`)`;               //Constructor without initialization
+   `};`
    <font color="#000000">
 
 In order to develop a new problem, you will need to accomplish the following steps:
