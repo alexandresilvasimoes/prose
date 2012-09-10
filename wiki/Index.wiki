@@ -9,6 +9,13 @@ Welcome to the ProSE Wiki. Here you will find:
   * How to install, configure and run
 
 
+= What problems are already ready for use? =
+
+  * Water-jugs problem
+  * Tower of Hanoi
+  * Rubik's cube
+  * Oil and tubes problem
+
 = Team =
 
   * Prof. Alexandre da Silva Simões (UNESP)
