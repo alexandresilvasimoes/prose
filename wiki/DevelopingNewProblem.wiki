@@ -72,7 +72,7 @@ The first thing to think is: how can I model my states? The vars that you need t
 
 == Assigning a initial state ==
 
-You must create a initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter. Examples:
+You must create a initial state (problem search seed state) to your problem. Here are some examples:
 
 {{{
    //Example for water-jugs problem:
