@@ -1,10 +1,11 @@
 #8-Queens board problem
 = 8-Queens problem =
 
-Goal: to place 8 queens on the chess board so that they do not check each other. For 8-queen, we have 92 solutions. If we exclude symmetry, there are possible 12 solutions.
+Goal: to place 8 queens on the chess board so that they do not check each other. The boar is initially empty, and queens must be inserted one by one. 
 
 = Solutions =
 
+For 8-queen, we have 92 solutions. If we exclude symmetry, there are possible 12 solutions.
 One possible solution:
 
 http://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chess_d45.svg/26px-Chess_d45.svg.png
