@@ -3,7 +3,7 @@
 = How do I develop code to a new problem? =
 
    <font color="#0000FF">
-   class ProblemData `{`
+   class ProblemData   `{`
       private`:` <br>
          `//`problem vars 
       public`:` 
