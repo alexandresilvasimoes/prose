@@ -80,7 +80,7 @@ You must create a initial state (problem search seed state) to your problem. Her
     {
       int my_jar1 = 0;   //Defines that there is no water in jar 1
       int my_jar2 = 0;   //Defines that there is no water in jar 2
-     setState(my_jar1, my_jar2);
+      setState(my_jar1, my_jar2);
     }
 }}}
 
