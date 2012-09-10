@@ -1,0 +1,14 @@
+#Map Coloring problem page
+
+= Map Coloring problem =
+
+The goal of a map coloring problem is to color a map so that regions sharing a common border have different colors. (Regions that meet only in a point may share a common color.)
+
+http://www.ctl.ua.edu/math103/mapcolor/wpe4215.gif
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
