@@ -44,10 +44,13 @@ class ProblemRules
 
 == Steps for modeling your problems ==
 
+In order to model your problem, you must accomplish the following steps:
+
   # Model your states
   # Assign your initial state
   # Explain what are your goals
   # Define your problem's rules
+
 
 == 1. Model your states ==
 
