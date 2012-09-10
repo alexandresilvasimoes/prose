@@ -4,8 +4,8 @@
 
    <font color="#0000FF">
    class ProblemData `{`<br>
-      private`:`
-         `//`problem vars 
+      private`:` <br>
+         `//`problem vars  <br/>
       public`:`
          char`*` getState`(`void`)`;            //Returns current state
          void  setState`(`char`*)`;            //Set current state
