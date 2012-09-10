@@ -6,8 +6,8 @@ The 8-puzzle is a square board with 9 positions, filled by 8 numbered tiles and 
 
 = Problem states =
 
-Initial state:
+Initial state: <br>
 http://www.8puzzle.com/images/8_puzzle_start_state_a.png
 
-Goal state:
+Goal state: <br>
 http://www.8puzzle.com/images/8_puzzle_goal_state_a.png
