@@ -6,7 +6,7 @@
    class ProblemData `{`<br>
       private`:` <br>
          `//`problem vars  <br/>
-      public`:` <br/>
+      public`:` 
          char`*` getState`(`void`)`;            //Returns current state  <br/>
          void  setState`(`char`*)`;            //Set current state<br/>
          int isGoal`(`ProblemData `*)`;    //Returns 1 when the node is a goal<br/>
