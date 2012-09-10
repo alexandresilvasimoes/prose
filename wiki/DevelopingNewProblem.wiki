@@ -59,7 +59,7 @@ The first thing to think is: how can I model my states? The vars that you need t
    // Example for the Rubik's cube:
    class ProblemData {
       private:
-         char cube[6][9];                    
+         char cube[6][9];   //Model a cube with 6 faces and 9 cells in each face                  
          ...
    //Example for the Water-jug problem:
    class ProblemData {
