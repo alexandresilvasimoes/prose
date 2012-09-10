@@ -78,8 +78,9 @@ You must create a initial state (problem search seed state) and create a Problem
    //Example for water-jugs problem:
     ProblemData::ProblemData(void) 
     {
-      jar1 = 0;   //Defines that there is no water in jar 1
-      jar2 = 0;   //Defines that there is no water in jar 2
+      int my_jar1 = 0;   //Defines that there is no water in jar 1
+      int my_jar2 = 0;   //Defines that there is no water in jar 2
+     setState(my_jar1, my_jar2);
     }
 }}}
 
@@ -90,7 +91,7 @@ You must create a initial state (problem search seed state) and create a Problem
       int my_tower1[5] = {5,4,3,2,1};
       int my_tower2[5] = {0,0,0,0,0}; 
       int my_tower3[5] = {0,0,0,0,0}; 
-      ProblemData state(my_tower1, my_tower2, my_tower3);
+      setState(my_tower1, my_tower2, my_tower3);
    }
 }}}
 
