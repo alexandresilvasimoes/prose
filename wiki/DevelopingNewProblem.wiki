@@ -2,6 +2,10 @@
 
 = How do I develop code to a new problem? =
 
+If you would like to develop code to a new problem, it is really simple. <br/>
+The unique classes that user must deal with are the classes: ProblemData (that defines the problem general aspects) and ProblemRules (that stores the rules of the problem). <br/>
+The *ProblemData* class has the following structure: <br/>
+
    <font color="#0000FF">
    class ProblemData   `{`
       private`:` <br>
