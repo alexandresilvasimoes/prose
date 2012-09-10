@@ -11,7 +11,7 @@ The *ProblemData* class has the following structure: <br/>
       private:
          //problem vars 
       public: 
-         char* getState(void);            //Returns a pointer to current state
+         char* getState(void);         //Returns a pointer to current state
          void setState(char*);            //Set current state with argument
          int isGoal(ProblemData *);    //Returns 1 when the argument is a goal
          int heuristic(void);                //Returns the estimated path coast from node to the goal
