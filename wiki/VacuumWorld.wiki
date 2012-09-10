@@ -1,0 +1,14 @@
+#Vacuum world problem
+
+= Vacuum world problem =
+
+
+http://homepages.ius.edu/rwisman/C463/html/chapter3-5.gif
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
