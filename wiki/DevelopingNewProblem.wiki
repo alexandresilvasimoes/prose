@@ -78,8 +78,8 @@ You must create a initial state (problem search seed state) and create a Problem
    //Example for water-jugs problem:
     ProblemData::ProblemData(void) 
     {
-      jar1 = 0;
-      jar2 = 0;
+      jar1 = 0;   //Defines that there is no water in jar 1
+      jar2 = 0;   //Defines that there is no water in jar 2
     }
 }}}
 
