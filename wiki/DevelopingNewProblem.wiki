@@ -11,14 +11,14 @@ The *ProblemData* class has the following structure: <br/>
       private:
          //problem vars 
       public: 
-         char* getState(void);            //Returns current state  <br/>
-         void  setState(char*);            //Set current state<br/>
-         int isGoal(ProblemData *);    //Returns 1 when the node is a goal<br/>
-         int heuristic(void);                //Returns the estimated path coast from node to the goal<br/>
-         int cost(void);                       //Retuns the path cost from node to the initial node<br/>
-         char* print(void);                  //How to print the state?<br/>
-         ProblemData(void);               //Constructor without initialization<br/>
-   `};`<br/>
+         char* getState(void);            //Returns a pointer to current state
+         void setState(char*);            //Set current state with argument
+         int isGoal(ProblemData *);    //Returns 1 when the argument is a goal
+         int heuristic(void);                //Returns the estimated path coast from node to the goal
+         int cost(void);                       //Returns the path cost from node to the initial node
+         char* print(void);                  //How to print the state?
+         ProblemData(void);               //Class constructor
+   };
 }}}
 
 In order to develop a new problem, you will need to accomplish the following steps:
