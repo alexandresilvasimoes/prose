@@ -2,13 +2,15 @@
 
 = Vacuum world problem =
 
+In the vacuum world there are a number of rooms, a vacuum and dust. All rooms are dirty. The problem main goal is to reach a state where the world is completely clean.
 
 http://homepages.ius.edu/rwisman/C463/html/chapter3-5.gif
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Modeled problem consider the following possible actions:
+  * R1: Move vacuum to the left room
+  * R2: Move vacuum to the right room
+  * R3: Suck
+Problem is modeled with 2 rooms.
