@@ -3,9 +3,9 @@
 = How do I develop code to a new problem? =
 
    <font color="#0000FF">
-   class ProblemData `{`<br>
+   class ProblemData `{`
       private`:` <br>
-         `//`problem vars  <br/>
+         `//`problem vars 
       public`:` 
          char`*` getState`(`void`)`;            //Returns current state  <br/>
          void  setState`(`char`*)`;            //Set current state<br/>
