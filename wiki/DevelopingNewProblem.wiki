@@ -4,9 +4,7 @@
 
 == General Overview ==
 
-If you would like to develop code to a new problem, it is really simple. <br/>
-The unique classes that user must deal with are the classes: ProblemData (that defines the problem general aspects) and ProblemRules (that stores the rules of the problem). <br/>
-The *ProblemData* class has the following structure: <br/>
+If you would like to develop code to a new problem, it is simple. User must edit only two classes: ProblemData (that defines the problem general aspects) and ProblemRules (that stores the rules of the problem). The *ProblemData* class has the following structure:
 
 {{{
    class ProblemData {
