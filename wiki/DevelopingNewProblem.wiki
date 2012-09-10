@@ -35,10 +35,10 @@ class ProblemRules
          void setRulesNumber (int);           //Set the number of rules (must be setted by user)
          int getRulesNumber (void);           //Return the number of rules
          ptrProblemRulesMethod getRule(int);  //Returns the pointer to one method (rule of the problem)
-         Node* R0(Node*);                     //Rule 0
-         Node* R1(Node*);                     //Rule 1
-         Node* R2(Node*);                     //Rule 2
-         Node* R3(Node*);                     //Rule 3
+         Node* R0(Node*);                     //Rule 0 (receives a pointer to a father node, and returns a sun node)
+         Node* R1(Node*);                     //Rule 1 (receives a pointer to a father node, and returns a sun node)
+         Node* R2(Node*);                     //Rule 2 (receives a pointer to a father node, and returns a sun node)
+         Node* R3(Node*);                     //Rule 3 (receives a pointer to a father node, and returns a sun node)
          ...
 };
 
