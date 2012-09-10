@@ -72,43 +72,43 @@ The first thing to think is: how can I model my states? The vars that you need t
 
 == Assigning a initial state ==
 
-In order to develop a new problem, you will need to accomplish the following steps:
+You must create a initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter. Examples:
 
-  # Create initial state (problem search seed state) and create a ProblemData object, with this initial state as a parameter. Examples:
+{{{
+  //Example for water-jugs problem:
+  ProblemData state (0,0);
 
-   <font color="#0000FF">
-  //Example for water-jugs problem: <br>
-   <font color="#000000">
-  ProblemData state `(`0,0`)`; <br>
+  //Example for Hanoi tower problem: 
+  int tower1[NUM_DISKS] = {5,4,3,2,1};
+  int tower2[NUM_DISKS] = {0,0,0,0,0}; 
+  int tower3[NUM_DISKS] = {0,0,0,0,0}; 
+  ProblemData state(tower1, tower2, tower3); 
+}}}
 
-   <font color="#0000FF">
-  //Example for Hanoi tower problem: <br>
-   <font color="#000000">
-  int tower1`[`NUM_DISKS`]` = `{`5,4,3,2,1`}`; <br>
-  int tower2`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
-  int tower3`[`NUM_DISKS`]` = `{`0,0,0,0,0`}`; <br>
-  ProblemData state`(`tower1, tower2, tower3`)`; <br>
+== Explain what are problem goals ==
 
-  # *Explain what is a problem goal.* In ProblemData::isGoal, you must develop a method that can return (1) if a state is a Goal and (0) othewise, based on a pointer to a ProblemData.
+In ProblemData::isGoal, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
-   <font color="#0000FF">
+{{{
    int ProblemData::isGoal(ProblemData`*` pdptr)
-   `{`
+   {
       int a;
       a = 1;
       if (a==1)  return(1); else return(0);
-   `}`;
-   <font color="#000000">
+   };
+}}}
 
-  #  *Explain how to print your states.* In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
+== Explain how to print your states in screen ==
 
+In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
 
-
-char`*` ProblemData`::`print`()`
-   `{`
-     char`*` buffer; <br>
-     char aux; <br
-     buffer = `(`char`*``)` malloc `(`sizeof`(`char`[`MAX_TEXT_SIZE`]``)``)`; <br>
-     strcat`(`buffer, `"`this is my state`"``)`; <br>
-     return`(`buffer`)`; <br>
-   `}`;
+{{{
+char* ProblemData::print( )
+   {
+     char* buffer;
+     char aux;
+     buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE]));
+     strcat(buffer, "this is my state");
+     return(buffer);
+   };
+}}}
