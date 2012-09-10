@@ -70,7 +70,7 @@ The first thing to think is: how can I model my states? The vars that you need t
          ...
 }}}
 
-== Assigning a initial state ==
+== 2. Assigning a initial state ==
 
 You must create a initial state (problem search seed state) to your problem. Here are some examples:
 
@@ -110,9 +110,9 @@ You must create a initial state (problem search seed state) to your problem. Her
 
 }}}
 
-== Explain what are problem goals ==
+== 3. Explain what are problem goals ==
 
-In ProblemData::isGoal, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
+In `ProblemData::isGoal( )`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
 {{{
    int ProblemData::isGoal(ProblemData`*` pdptr)
