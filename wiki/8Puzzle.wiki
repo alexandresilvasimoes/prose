@@ -1,4 +1,4 @@
-#8-Puzzle problem
+#summary Describes 8-Puzzle problem implementation in ProSE
 
 = 8-Puzzle Problem =
 
