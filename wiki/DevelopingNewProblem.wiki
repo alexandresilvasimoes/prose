@@ -7,6 +7,8 @@
 If you would like to develop code to a new problem, it is simple. User must edit only two classes: ProblemData (that defines the problem general aspects) and ProblemRules (that stores the rules of the problem). The *ProblemData* class has the following structure:
 
 {{{
+   //FILE: ProblemRules.h
+
    class ProblemData {
       private:
          //problem vars 
@@ -24,8 +26,11 @@ If you would like to develop code to a new problem, it is simple. User must edit
 The ProblemRules store the rules of the problem. Its general structure is:
 
 {{{
-class ProblemRules
-{
+
+   //FILE: ProblemRules.h
+
+   class ProblemRules
+   {
       private:
          typedef Node* (*ptrMethodType)(Node*);
          typedef Node* (ProblemRules::*ptrProblemRulesMethod)(Node*);
@@ -40,8 +45,7 @@ class ProblemRules
          Node* R2(Node*);                     //Rule 2 (receives a pointer to a father node, and returns a sun node)
          Node* R3(Node*);                     //Rule 3 (receives a pointer to a father node, and returns a sun node)
          ...
-};
-
+   };
 }}}
 
 == Steps for modeling your problems ==
@@ -79,6 +83,8 @@ The first thing to think is: how can I model my states? The vars that you need t
 You must create a initial state (problem search seed state) to your problem. Here are some examples:
 
 {{{
+   //FILE: ProblemData.cpp
+
    //Example for water-jugs problem:
     ProblemData::ProblemData(void) 
     {
@@ -88,6 +94,8 @@ You must create a initial state (problem search seed state) to your problem. Her
 }}}
 
 {{{
+   //FILE: ProblemData.cpp
+
    //Example for Hanoi tower problem: 
    ProblemData::ProblemData(void) 
    {
@@ -98,6 +106,8 @@ You must create a initial state (problem search seed state) to your problem. Her
 }}}
 
 {{{
+   //FILE: ProblemData.cpp
+
    //Example for Rubik's cube
    ProblemData::ProblemData(void) 
    {
@@ -119,6 +129,8 @@ You must create a initial state (problem search seed state) to your problem. Her
 In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
 {{{
+   //FILE: ProblemData.cpp
+
    //Example for water-jugs problem
    int ProblemData::isGoal(ProblemData* pdptr)
    {
@@ -131,7 +143,9 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
 In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
 
 {{{
-char* ProblemData::print( )
+   //FILE: ProblemData.cpp
+
+   char* ProblemData::print( )
    {
      char* buffer;
      char aux;
@@ -144,4 +158,3 @@ char* ProblemData::print( )
 == 6. Define your rules! ==
 
 == 7. If you intent to work with heuristic-based approaches, define it!  ==
-
