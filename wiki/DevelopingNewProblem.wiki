@@ -111,7 +111,10 @@ You must create a initial state (problem search seed state) to your problem. Her
 
 }}}
 
-== 3. Explain what are problem goals ==
+== 3. Create methods that can return current state ==
+
+
+== 4. Explain what are problem goals ==
 
 In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
@@ -123,7 +126,7 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
    };
 }}}
 
-== Explain how to print your states in screen ==
+== 5. Explain how to print your states in screen ==
 
 In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
 
@@ -137,3 +140,8 @@ char* ProblemData::print( )
      return(buffer);
    };
 }}}
+
+== 6. Define your rules! ==
+
+== 7. If you intent to work with heuristic-based approaches, define it!  ==
+
