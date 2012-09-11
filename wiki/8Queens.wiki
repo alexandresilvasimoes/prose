@@ -1,4 +1,5 @@
-#8-Queens board problem
+#summary Describes 8-Queens problem implementation in ProSE
+
 = 8-Queens problem =
 
 The queen in a chess board can attack in diagonal line as well as in straight lines (horizontal and vertical). The goal in the 8-Queens problem is to place 8 queens on the chess board so that they do not check each other. The boar is initially empty, and queens must be inserted one by one. 
