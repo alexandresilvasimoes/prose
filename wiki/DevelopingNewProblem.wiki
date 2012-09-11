@@ -136,6 +136,21 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
    {
       if ((pdptr->getJar1()==2) || (pdptr->getJar2()==2)) return(1); else return(0);
    };
+
+   //Example for Rubik's cube problem
+   int ProblemData::isGoal(ProblemData* pdptr)
+   {
+    char test;              //used to test the color condition
+    int faces_closed = 0;   //stores the number of faces with cells of the same color
+    
+    for (int face=0; face<=5; face++) {
+        test = cube[face][0];
+        if ((cube[face][1]==test) && (cube[face][2]==test) && (cube[face][3]==test) && (cube[face][4]==test) && (cube[face][5] == test) && (cube[face][6] == test) && (cube[face][7] == test) && (cube[face][8] == test)) {
+           faces_closed = faces_closed + 1;
+        }
+    }    
+    if (faces_closed==6) return(1); else return(0);
+   }; 
 }}}
 
 == 5. Explain how to print your states in screen ==
