@@ -1,4 +1,4 @@
-#Blocks world problem.
+#summary Describes Block World problem implementation in ProSE
 
 = Blocks World problem =
 
