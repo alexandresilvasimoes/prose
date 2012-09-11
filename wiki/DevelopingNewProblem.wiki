@@ -308,6 +308,8 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
 {{{
   //FILE: ProblemData.cpp
 
+   //Example for the Rubik's cube problem
+
    int ProblemData::cost(void)
    {
       return(1);  
@@ -334,4 +336,21 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
     }
    return(h);
    };
+}}}
+
+Even if your problem will not use heuristics or cost, you cannot remove these methods. In this case, you should return (0) in both cases.
+
+{{{
+
+   //Example for the Water-jags problem (nor heuristic or cost are used)
+
+   int ProblemData::cost(void)
+   {
+      return(0);  
+   };
+
+   int ProblemData::heuristic(void)
+   {
+      return(0);
+   };   
 }}}
