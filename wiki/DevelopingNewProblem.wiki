@@ -193,7 +193,31 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
    };
 }}}
 
-
 == 5. Define your rules! ==
+
+{{{
+   //FILE: ProblemData.cpp
+  
+   //Example for the Water-jugs problem
+
+   Node* ProblemRules::R0(Node* father)   //Fill jar 1 with 4L of water
+   {
+      (father->getData())->setJar1(4);
+      return(father);
+   };
+
+   Node* ProblemRules::R1(Node * father)   //Fill jar 2 with 3L of water
+   {
+      (father->getData())->setJar2(3);
+      return(father);
+   };
+
+   Node* ProblemRules::R2(Node * father)   //Empty jar 1
+   {
+      (father->getData())->setJar1(0);
+      return(father);
+   };
+   ...
+}}}
 
 == 6. If you intent to work with heuristic-based approaches, define it!  ==
