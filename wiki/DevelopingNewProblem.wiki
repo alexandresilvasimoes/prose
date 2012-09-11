@@ -4,7 +4,13 @@
 
 == General Overview ==
 
-If you would like to develop code to a new problem, it is simple. User must edit only two classes: ProblemData (that defines the problem general aspects) and ProblemRules (that stores the rules of the problem). The *ProblemData* class has the following structure:
+If you would like to develop code to a new problem, it is simple. User must edit only two classes: 
+
+  * ProblemData (that defines the problem general aspects) 
+  * ProblemRules (that stores the rules of the problem)
+
+It is forbidden to edit any other class.
+The *ProblemData* class has the following structure:
 
 {{{
    //FILE: ProblemRules.h
