@@ -1,4 +1,6 @@
+#summary ProSE Main Guide
 #labels Featured
+
 = Introduction =
 
 Welcome to the ProSE Wiki. Here you will find:
