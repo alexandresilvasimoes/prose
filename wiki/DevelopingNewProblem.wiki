@@ -13,7 +13,7 @@ It is forbidden to edit any other class.
 The *ProblemData* class has the following structure:
 
 {{{
-   //FILE: ProblemRules.h
+   //FILE: ProblemData.h
 
    class ProblemData {
       private:
