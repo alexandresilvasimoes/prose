@@ -59,7 +59,9 @@ In order to model your problem, you must accomplish the following steps:
 The first thing to think is: how can I model my states? The vars that you need to model your state must be inserted in your ProblemData class. Here are some examples:
 
 {{{
-   // Example for the Rubik's cube:
+   //FILE: ProblemData.h
+
+   //Example for the Rubik's cube:
    class ProblemData {
       private:
          char cube[6][9];   //Model a cube with 6 faces and 9 cells in each face                  
