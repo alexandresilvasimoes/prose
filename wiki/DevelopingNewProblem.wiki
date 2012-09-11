@@ -304,3 +304,34 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
 }}}
 
 == 6. If you intent to work with heuristic-based approaches, define it!  ==
+
+{{{
+  //FILE: ProblemData.cpp
+
+   int ProblemData::cost(void)
+   {
+      return(1);  
+   };
+
+   int ProblemData::heuristic(void){
+
+    // Heuristic basic idea: colors should be grouped, anywhere.
+    // Look at a cube face. Get the first color and sum 1 point to each other cell of the same color 
+    // that is not in contact with the first horizontally and vertically.
+
+    int h=0;        //Heuristic value
+    char cell_color;
+    
+    for (int face=0; face<=5; face++) {
+        for (int cell=0; cell<=8; cell++) {
+            cell_color = *(getColor(face, cell));
+            for (int aux_cell=0; aux_cell<=8; aux_cell++) {
+                if (aux_cell != cell) {
+                   if (cell_color != *(getColor(face, aux_cell))) h = h+1;
+                }   
+            }    
+        }
+    }
+   return(h);
+   };
+}}}
