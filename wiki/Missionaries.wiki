@@ -1,4 +1,4 @@
-#Missionaries and cannibals problem
+#summary Describes Missionaries and cannibals problem implementation in ProSE
 
 = Missionaries and cannibals problem =
 
