@@ -8,7 +8,7 @@ In order to install ProSE you will need:
   # Download DevC++ [http://www.bloodshed.net/devcpp.html here]
   # Select your problem: in folder "/problems/my_problem" you will find four files:
       # ProblemData.h
-      # 'ProblemRules.h'
+      #  'ProblemRules.h'
       # ProblemData.cpp
       #ProblemRules.cpp
       Copy these files to the main folder, overwriting previous ones.
