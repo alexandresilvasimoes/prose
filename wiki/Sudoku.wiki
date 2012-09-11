@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Describes Sudoku implementation in ProSE
 
 = Sudoku problem =
 
