@@ -136,6 +136,9 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
    {
       if ((pdptr->getJar1()==2) || (pdptr->getJar2()==2)) return(1); else return(0);
    };
+}}}
+{{{
+   //FILE: ProblemData.cpp
 
    //Example for Rubik's cube problem
    int ProblemData::isGoal(ProblemData* pdptr)
