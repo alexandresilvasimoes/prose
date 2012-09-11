@@ -1,4 +1,4 @@
-#Vacuum world problem
+#summary Describes Wacuum world problem implementation in ProSE
 
 = Vacuum world problem =
 
