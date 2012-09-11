@@ -5,7 +5,7 @@ Welcome to the ProSE Wiki. Here you will find:
 
   * Project Vision and requirements [WikiSyntax#Wiki-style_markup]
   * Project design and key concepts
-  * [DevelopingNewProblems Developers guide: How do I model new problems?]
+  * [DevelopingNewProblem Developers guide: How do I model new problems?]
   * How to install, configure and run
 
 
