@@ -13,5 +13,5 @@ Welcome to the ProSE Wiki. Here you will find:
 
 = Team =
 
-  * Prof. Alexandre da Silva Simões (UNESP)
+  * [http://www.sorocaba.unesp.br/professor/assimoes Prof. Alexandre da Silva Simões (UNESP)]
   * Prof. Esther Luna Colombini (UNESP/FEI)
