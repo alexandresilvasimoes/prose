@@ -4,7 +4,7 @@
 
 In order to install ProSE you will need:
 
-  # Download the latest version of prose [here http://code.google.com/p/prose/downloads/list]
+  # Download the latest version of prose [http://code.google.com/p/prose/downloads/list here]
   # Download the DevC++ [here http://www.bloodshed.net/devcpp.html]
   # Select your problem: select the folder of your problem, copy and past ProblemData and ProblemRules to the main folder
   # Compile and run.
