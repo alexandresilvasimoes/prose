@@ -200,6 +200,27 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
   
    //Example for the Water-jugs problem
 
+   ProblemRules::ProblemRules (void) 
+   {
+       setRulesNumber(8);  // Here you must set the number of rules your are using...
+   };
+
+   ptrProblemRulesMethod ProblemRules::getRule(int rule)
+   {
+       ptrProblemRulesMethod p[getRulesNumber()];
+       p[0]=&ProblemRules::R0;
+       p[1]=&ProblemRules::R1;
+       p[2]=&ProblemRules::R2;
+       p[3]=&ProblemRules::R3;
+       p[4]=&ProblemRules::R4;
+       p[5]=&ProblemRules::R5;
+       p[6]=&ProblemRules::R6;
+       p[7]=&ProblemRules::R7;  //Here you must use this structure for all your rules
+       return(p[rule]);
+   };
+
+   //Now you can define your rules...
+
    Node* ProblemRules::R0(Node* father)   //Fill jar 1 with 4L of water
    {
       (father->getData())->setJar1(4);
