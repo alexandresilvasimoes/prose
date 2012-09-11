@@ -1,4 +1,4 @@
-#Arad Bucharest problem
+#summary Describes Arad-Bucharest problem implementation in ProSE
 
 = Arad Bucharest problem =
 
