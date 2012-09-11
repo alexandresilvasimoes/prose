@@ -1,4 +1,4 @@
-#Map Coloring problem page
+#summary Describes Map Coloring problem implementation in ProSE
 
 = Map Coloring problem =
 
