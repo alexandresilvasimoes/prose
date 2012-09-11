@@ -163,15 +163,37 @@ In ProblemData::print(), you must return a char pointer with the data that will 
 {{{
    //FILE: ProblemData.cpp
 
-   char* ProblemData::print( )
+   //Example for the Rubik's cube
+   char* ProblemData::print()
    {
-     char* buffer;
-     char aux;
-     buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE]));
-     strcat(buffer, "this is my state");
-     return(buffer);
+      char* buffer; 
+      char aux;
+      buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE]));
+     
+      strcpy(buffer, "<[");
+      for (int face=0; face<=5; face++) {
+         for (int cell=0; cell<=8; cell++){
+             strncat(buffer, getColor(face, cell), 1);
+         }
+         if (face!=5) strcat(buffer, "][");
+      }
+      strcat(buffer, "]>");
+      return(buffer);
    };
 }}}
+{{{
+   //FILE: ProblemData.cpp
+  
+   //Example for the Water-jugs problem
+   char* ProblemData::print()
+   {
+      char* buffer; 
+      buffer = (char*) malloc (sizeof(char[20]));
+      sprintf(buffer, "<%d,%d>", jar1, jar2);
+      return(buffer);
+   };
+}}}
+
 
 == 6. Define your rules! ==
 
