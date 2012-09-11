@@ -55,7 +55,9 @@ In order to model your problem, you must accomplish the following steps:
   # Model your states
   # Assign your initial state
   # Explain what are your goals
+  # Explain how to print your state
   # Define your problem's rules
+  # Define your problem's heuristics and cost (If using heuristic-based algorithms)
 
 
 == 1. Model your states ==
@@ -121,10 +123,7 @@ You must create a initial state (problem search seed state) to your problem. Her
 
 }}}
 
-== 3. Create methods that can return current state ==
-
-
-== 4. Explain what are problem goals ==
+== 3. Explain what are problem goals ==
 
 In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
 
@@ -156,7 +155,7 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
    }; 
 }}}
 
-== 5. Explain how to print your states in screen ==
+== 4. Explain how to print your states in screen ==
 
 In `ProblemData::print(void)`, you must return a char pointer with the data that will be printed in a state.
 
@@ -195,6 +194,6 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
 }}}
 
 
-== 6. Define your rules! ==
+== 5. Define your rules! ==
 
-== 7. If you intent to work with heuristic-based approaches, define it!  ==
+== 6. If you intent to work with heuristic-based approaches, define it!  ==
