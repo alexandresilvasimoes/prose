@@ -158,7 +158,7 @@ In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can
 
 == 5. Explain how to print your states in screen ==
 
-In ProblemData::print(), you must return a char pointer with the data that will be printed in a state.
+In `ProblemData::print(void)`, you must return a char pointer with the data that will be printed in a state.
 
 {{{
    //FILE: ProblemData.cpp
