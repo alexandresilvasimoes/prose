@@ -1,4 +1,4 @@
-#install
+#summary Describes how to install ProSE in your computer
 
 = Instalation Guide =
 
