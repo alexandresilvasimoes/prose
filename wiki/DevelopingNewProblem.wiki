@@ -79,6 +79,10 @@ The first thing to think is: how can I model my states? The vars that you need t
       private:
          char cube[6][9];   //Model a cube with 6 faces and 9 cells in each face                  
          ...
+}}}
+{{{
+   //FILE: ProblemData.h
+
    //Example for the Water-jugs problem:
    class ProblemData {
       private:
