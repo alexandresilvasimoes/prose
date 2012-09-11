@@ -65,7 +65,7 @@ In order to model your problem, you must accomplish the following steps:
   # Define your problem's rules
   # Define your problem's heuristics and cost (If using heuristic-based algorithms)
 
-___
+----
 
 == 1. Model your states ==
 
