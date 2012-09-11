@@ -8,3 +8,5 @@ In order to install ProSE you will need:
   # Download the DevC++ [http://www.bloodshed.net/devcpp.html here]
   # Select your problem: select the folder of your problem, copy and past ProblemData and ProblemRules to the main folder
   # Compile and run.
+
+   Since ProSE is written in C++, it can compile in all Operational Systems. However, current Graphical User Interface (GUI) -- available in main.cpp -- requires Microsoft Windows. Next versions will be directed to cross-platform compilation.
