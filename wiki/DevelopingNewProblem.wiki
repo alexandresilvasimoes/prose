@@ -82,9 +82,8 @@ You must create a initial state (problem search seed state) to your problem. Her
    //Example for water-jugs problem:
     ProblemData::ProblemData(void) 
     {
-      int my_jar1 = 0;   //Defines that there is no water in jar 1
-      int my_jar2 = 0;   //Defines that there is no water in jar 2
-      setState(my_jar1, my_jar2);
+      jar1 = 0;   //Defines that there is no water in jar 1
+      jar2 = 0;   //Defines that there is no water in jar 2
     }
 }}}
 
@@ -92,10 +91,9 @@ You must create a initial state (problem search seed state) to your problem. Her
    //Example for Hanoi tower problem: 
    ProblemData::ProblemData(void) 
    {
-      int my_tower1[5] = {5,4,3,2,1};
-      int my_tower2[5] = {0,0,0,0,0}; 
-      int my_tower3[5] = {0,0,0,0,0}; 
-      setState(my_tower1, my_tower2, my_tower3);
+      tower1[5] = {5,4,3,2,1};
+      tower2[5] = {0,0,0,0,0}; 
+      tower3[5] = {0,0,0,0,0}; 
    }
 }}}
 
@@ -103,13 +101,12 @@ You must create a initial state (problem search seed state) to your problem. Her
    //Example for Rubik's cube
    ProblemData::ProblemData(void) 
    {
-     char mycube[6][9] = {  'O','O','O','W','W','W','W','W','W', 
+     cube = {  'O','O','O','W','W','W','W','W','W', 
                           'Y','Y','Y','O','O','O','O','O','O', 
                           'W','W','W','R','R','R','R','R','R', 
                           'G','G','G','G','G','G','G','G','G',
                           'B','B','B','B','B','B','B','B','B',
                           'R','R','R','Y','Y','Y','Y','Y','Y'};
-      setState(&mycube[0][0]);
    };
 
 }}}
