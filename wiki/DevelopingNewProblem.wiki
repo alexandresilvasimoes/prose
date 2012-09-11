@@ -38,8 +38,8 @@ The ProblemRules store the rules of the problem. Its general structure is:
    class ProblemRules
    {
       private:
-         typedef Node* (*ptrMethodType)(Node*);
-         typedef Node* (ProblemRules::*ptrProblemRulesMethod)(Node*);
+         typedef Node* (*ptrMethodType)(Node*);  //Do not change this line
+         typedef Node* (ProblemRules::*ptrProblemRulesMethod)(Node*);  //Do not change this line
          int rules_number;                    //Stores the number of rules. Must be setted by user.
       public:
          ProblemRules(void);                  //Constructor
