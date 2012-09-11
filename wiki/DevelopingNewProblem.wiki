@@ -196,7 +196,7 @@ In `ProblemData::print(void)`, you must return a char pointer with the data that
 == 5. Define your rules! ==
 
 {{{
-   //FILE: ProblemData.cpp
+   //FILE: ProblemRules.cpp
   
    //Example for the Water-jugs problem
 
