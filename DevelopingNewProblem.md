@@ -1,0 +1,360 @@
+# How do I develop code to a new problem? #
+
+## General Overview ##
+
+If you would like to develop code to a new problem, it is simple. User must edit only two classes:
+
+  * ProblemData (that defines the problem general aspects)
+  * ProblemRules (that stores the rules of the problem)
+
+It is forbidden to edit any other class.
+The **ProblemData** class has the following structure:
+
+```
+   //FILE: ProblemData.h
+
+   class ProblemData {
+      private:
+         //problem vars 
+      public: 
+         char* getState(void);         //Returns a pointer to current state
+         void setState(char*);         //Set current state with argument
+         int isGoal(ProblemData *);    //Returns 1 when the argument is a goal
+         int heuristic(void);          //Returns the estimated path coast from node to the goal
+         int cost(void);               //Returns the path cost from node to the initial node
+         char* print(void);            //How to print the state?
+         ProblemData(void);            //Class constructor
+   };
+```
+
+The ProblemRules store the rules of the problem. Its general structure is:
+
+```
+
+   //FILE: ProblemRules.h
+
+   class ProblemRules
+   {
+      private:
+         typedef Node* (*ptrMethodType)(Node*);  //Do not change this line
+         typedef Node* (ProblemRules::*ptrProblemRulesMethod)(Node*);  //Do not change this line
+         int rules_number;                    //Stores the number of rules. Must be setted by user.
+      public:
+         ProblemRules(void);                  //Constructor
+         void setRulesNumber (int);           //Set the number of rules (must be setted by user)
+         int getRulesNumber (void);           //Return the number of rules
+         ptrProblemRulesMethod getRule(int);  //Returns the pointer to one method (rule of the problem)
+         Node* R0(Node*);                     //Rule 0 (receives a pointer to a father node, and returns a sun node)
+         Node* R1(Node*);                     //Rule 1 (receives a pointer to a father node, and returns a sun node)
+         Node* R2(Node*);                     //Rule 2 (receives a pointer to a father node, and returns a sun node)
+         Node* R3(Node*);                     //Rule 3 (receives a pointer to a father node, and returns a sun node)
+         ...
+   };
+```
+
+## Steps for modeling your problems ##
+
+In order to model your problem, you must accomplish the following steps:
+
+  1. Model your states
+  1. Assign your initial state
+  1. Explain what are your goals
+  1. Explain how to print your state
+  1. Define your problem's rules
+  1. Define your problem's heuristics and cost (If using heuristic-based algorithms)
+
+
+---
+
+
+## 1. Model your states ##
+
+The first thing to think is: how can I model my states? The vars that you need to model your state must be inserted in your ProblemData class. Here are some examples:
+
+```
+   //FILE: ProblemData.h
+
+   //Example for the Rubik's cube:
+   class ProblemData {
+      private:
+         char cube[6][9];   //Model a cube with 6 faces and 9 cells in each face                  
+         ...
+```
+```
+   //FILE: ProblemData.h
+
+   //Example for the Water-jugs problem:
+   class ProblemData {
+      private:
+         int jar1;   //Store the amount of water in jar 1
+         int jar2;   //Store the amount of water in jar 2
+         ...
+```
+
+## 2. Assigning a initial state ##
+
+You must create a initial state (problem search seed state) to your problem. Here are some examples:
+
+```
+   //FILE: ProblemData.cpp
+
+   //Example for water-jugs problem:
+    ProblemData::ProblemData(void) 
+    {
+      jar1 = 0;   //Defines that there is no water in jar 1
+      jar2 = 0;   //Defines that there is no water in jar 2
+    }
+```
+
+```
+   //FILE: ProblemData.cpp
+
+   //Example for Hanoi tower problem: 
+   ProblemData::ProblemData(void) 
+   {
+      tower1[5] = {5,4,3,2,1};
+      tower2[5] = {0,0,0,0,0}; 
+      tower3[5] = {0,0,0,0,0}; 
+   }
+```
+
+```
+   //FILE: ProblemData.cpp
+
+   //Example for Rubik's cube
+   ProblemData::ProblemData(void) 
+   {
+     cube = {  'O','O','O','W','W','W','W','W','W', 
+                    'Y','Y','Y','O','O','O','O','O','O', 
+                    'W','W','W','R','R','R','R','R','R', 
+                    'G','G','G','G','G','G','G','G','G',
+                    'B','B','B','B','B','B','B','B','B',
+                    'R','R','R','Y','Y','Y','Y','Y','Y'};
+   };
+
+```
+
+## 3. Explain what are problem goals ##
+
+In `ProblemData::isGoal(ProblemData* pdptr)`, you must develop a method that can return (1) if a state is a Goal and (0) otherwise, based on a pointer to a ProblemData.
+
+```
+   //FILE: ProblemData.cpp
+
+   //Example for water-jugs problem
+   int ProblemData::isGoal(ProblemData* pdptr)
+   {
+      if ((pdptr->getJar1()==2) || (pdptr->getJar2()==2)) return(1); else return(0);
+   };
+```
+```
+   //FILE: ProblemData.cpp
+
+   //Example for Rubik's cube problem
+   int ProblemData::isGoal(ProblemData* pdptr)
+   {
+    char test;              //used to test the color condition
+    int faces_closed = 0;   //stores the number of faces with cells of the same color
+    
+    for (int face=0; face<=5; face++) {
+        test = cube[face][0];
+        if ((cube[face][1]==test) && (cube[face][2]==test) && (cube[face][3]==test) && (cube[face][4]==test) && (cube[face][5] == test) && (cube[face][6] == test) && (cube[face][7] == test) && (cube[face][8] == test)) {
+           faces_closed = faces_closed + 1;
+        }
+    }    
+    if (faces_closed==6) return(1); else return(0);
+   }; 
+```
+
+## 4. Explain how to print your states in screen ##
+
+In `ProblemData::print(void)`, you must return a char pointer with the data that will be printed in a state.
+
+```
+   //FILE: ProblemData.cpp
+
+   //Example for the Rubik's cube
+   char* ProblemData::print()
+   {
+      char* buffer; 
+      char aux;
+      buffer = (char*) malloc (sizeof(char[MAX_TEXT_SIZE]));
+     
+      strcpy(buffer, "<[");
+      for (int face=0; face<=5; face++) {
+         for (int cell=0; cell<=8; cell++){
+             strncat(buffer, getColor(face, cell), 1);
+         }
+         if (face!=5) strcat(buffer, "][");
+      }
+      strcat(buffer, "]>");
+      return(buffer);
+   };
+```
+```
+   //FILE: ProblemData.cpp
+  
+   //Example for the Water-jugs problem
+   char* ProblemData::print()
+   {
+      char* buffer; 
+      buffer = (char*) malloc (sizeof(char[20]));
+      sprintf(buffer, "<%d,%d>", jar1, jar2);
+      return(buffer);
+   };
+```
+
+## 5. Define your rules! ##
+
+```
+   //FILE: ProblemRules.cpp
+  
+   //Example for the Water-jugs problem
+
+   ProblemRules::ProblemRules (void) 
+   {
+       setRulesNumber(8);  // Here you must set the number of rules your are using...
+   };
+
+   ptrProblemRulesMethod ProblemRules::getRule(int rule)
+   {
+       ptrProblemRulesMethod p[getRulesNumber()];
+       p[0]=&ProblemRules::R0;
+       p[1]=&ProblemRules::R1;
+       p[2]=&ProblemRules::R2;
+       p[3]=&ProblemRules::R3;
+       p[4]=&ProblemRules::R4;
+       p[5]=&ProblemRules::R5;
+       p[6]=&ProblemRules::R6;
+       p[7]=&ProblemRules::R7;  //Here you must use this structure for all your rules
+       return(p[rule]);
+   };
+
+   //Now you can define your rules...
+
+   Node* ProblemRules::R0(Node* father)   //Fill jar 1 with 4L of water
+   {
+      (father->getData())->setJar1(4);
+      return(father);
+   };
+
+   Node* ProblemRules::R1(Node * father)   //Fill jar 2 with 3L of water
+   {
+      (father->getData())->setJar2(3);
+      return(father);
+   };
+
+   Node* ProblemRules::R2(Node * father)   //Empty jar 1
+   {
+      (father->getData())->setJar1(0);
+      return(father);
+   };
+   ...
+```
+```
+  //FILE: ProblemRules.cpp
+  
+   //Example for the Hanoi tower problem
+
+   ProblemRules::ProblemRules (void) 
+   {
+      setRulesNumber(6);  //Here you must set the number of rules you are using...
+   };
+
+   ptrProblemRulesMethod ProblemRules::getRule(int rule)
+   {
+       ptrProblemRulesMethod p[getRulesNumber()];
+       p[0]=&ProblemRules::R0;
+       p[1]=&ProblemRules::R1;
+       p[2]=&ProblemRules::R2;
+       p[3]=&ProblemRules::R3;
+       p[4]=&ProblemRules::R4;
+       p[5]=&ProblemRules::R5;  //Here you must use this structure for all your rules
+       return(p[rule]);
+   };
+
+   // This is a method created by user that will be used in rules...
+
+   Node* ChangePin(int pin_origin, int pin_dest, Node* father)
+   {
+      int disk_size;
+      int fp1, fp2;
+     
+      fp1 = (father->getData())->returnFirstofPin(pin_origin);
+      //printErrorMessage(fp1);
+      fp2 = (father->getData())->returnFirstofPin(pin_dest);
+     
+      //Check basic conditions
+      if (fp1 == 0) return(NULL);  //There is no disk in origin
+      if ((fp1 > fp2) && (fp2>0)) return(NULL);  //A disk cant go above a smaller disk
+     
+      disk_size = (father->getData())->removeFirstofPin(pin_origin);   
+      (father->getData())->insertFirstofPin(pin_dest, disk_size);
+     
+      return(father);
+   };
+
+   //Now you can define your rules...
+
+   Node* ProblemRules::R0(Node* father)   //Transfer first disk from pin0 to pin1
+   {
+      return(ChangePin(0,1, father));
+   };
+
+   Node* ProblemRules::R1(Node * father)   //Transfer firs disk from pin0 to pin2
+   {
+      return(ChangePin(0,2, father));
+   };
+```
+
+## 6. If you intent to work with heuristic-based approaches, define it! ##
+
+```
+  //FILE: ProblemData.cpp
+
+   //Example for the Rubik's cube problem
+
+   int ProblemData::cost(void)
+   {
+      return(1);  
+   };
+
+   int ProblemData::heuristic(void){
+
+    // Heuristic basic idea: colors should be grouped, anywhere.
+    // Look at a cube face. Get the first color and sum 1 point to each other cell of the same color 
+    // that is not in contact with the first horizontally and vertically.
+
+    int h=0;        //Heuristic value
+    char cell_color;
+    
+    for (int face=0; face<=5; face++) {
+        for (int cell=0; cell<=8; cell++) {
+            cell_color = *(getColor(face, cell));
+            for (int aux_cell=0; aux_cell<=8; aux_cell++) {
+                if (aux_cell != cell) {
+                   if (cell_color != *(getColor(face, aux_cell))) h = h+1;
+                }   
+            }    
+        }
+    }
+   return(h);
+   };
+```
+
+Even if your problem will not use heuristics or cost, you cannot remove these methods. In this case, you should return (0) in both cases.
+
+```
+
+   //Example for the Water-jags problem (nor heuristic or cost are used)
+
+   int ProblemData::cost(void)
+   {
+      return(0);  
+   };
+
+   int ProblemData::heuristic(void)
+   {
+      return(0);
+   };   
+```

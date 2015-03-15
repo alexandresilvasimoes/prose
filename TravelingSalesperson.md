@@ -1,0 +1,10 @@
+# Traveling Salesperson problem #
+
+Given a collection of cities and the cost of travel between each pair of them, the traveling salesman problem (TSP) is to find the cheapest way of visiting all of the cities and returning to your starting point.
+
+# Details #
+
+You should consider the TSP applied to allow the visitation of the UNESP campus:
+Sorocaba (start city), Rosana, Tupã, Dracena, Registro, Itapeva, Ourinhos.
+
+![http://upload.wikimedia.org/wikipedia/commons/9/9f/Example_The_travelling_salesman_problem_%28TSP%29.gif](http://upload.wikimedia.org/wikipedia/commons/9/9f/Example_The_travelling_salesman_problem_%28TSP%29.gif)

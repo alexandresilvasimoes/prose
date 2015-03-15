@@ -1,0 +1,8 @@
+# Sudoku problem #
+
+A Sudoku puzzle consists of a 9-by-9 matrix partitioned into nine 3-by-3 submatrices (‘boxes’). Some of the entries are given, and the puzzle is to ﬁnd the remaining entries, under the condition that the nine rows, the nine columns, and the nine boxes all contain a permutation of the symbols of some given alphabet of size 9, usually the digits 1-9, or the letters A-I.
+
+# Details #
+
+Implementation is based on a 2x2 sudoku with the following initial state: <br>
+<img src='http://www.sachsentext.de/gif/mini1.gif' />
